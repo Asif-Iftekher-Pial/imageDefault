@@ -33,7 +33,8 @@ class TestController extends Controller
             'image' => $filename,
         ]);
 
-        return redirect()->route('list');
+        return redirect()->route('list')->with('error', 'Data saved Successfully ');
+            
     }
 
     public function list()
